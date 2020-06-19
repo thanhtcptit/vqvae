@@ -1,0 +1,25 @@
+{
+    "dataset": {
+        "path": "data/original/128x128",
+        "train_val_split": 0.1
+    },
+    "model": {
+        "type": "vqvae_v1",
+        "image_shape": [32, 32, 3],
+        "num_hiddens": 128,
+        "embedding_dim": 64,
+        "num_embeddings": 512,
+        "commitment_cost": 0.25,
+        "learning_rate": 3e-1,
+        "decay": 0.99,
+        "use_ema": 1
+    },
+    "trainer": {
+        "batch_size": 16,
+        "num_gpus": 4,
+        "max_epochs": 200,
+        "num_parallel": 16,
+        "steps_per_epoch": 1000,
+        "num_examples_to_generate": 16
+    }
+}

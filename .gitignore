@@ -1,0 +1,4 @@
+.vscode/
+config/pushbullet.id
+data/*
+!.gitkeep

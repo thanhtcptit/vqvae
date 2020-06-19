@@ -1,0 +1,28 @@
+{
+    "dataset": {
+        "path": "data/original/product_32",
+        "train_val_split": 0.1
+    },
+    "model": {
+        "type": "conv",
+        "image_shape": [32, 32, 3],
+        "num_labels": 5256,
+        "latent_shape": [8, 8],
+        "embeddings_dim": 512,
+        "num_hiddens": 128,
+        "loss_stragegy": "softmax",
+        "margin": 0.25,
+        "learning_rate": 3e-2,
+        "drop_out": 0
+    },
+    "trainer": {
+        "num_gpus": 4,
+        "max_epochs": 100,
+        "num_parallel": 16,
+        "steps_per_epoch": 1000,
+        "items_per_batch": 10,
+        "images_per_item": 30, 
+        "batch_size": 16,
+        "vqvae_checkpoint_path": "train_log/vqvae-org_32/model-200000"
+    }
+}

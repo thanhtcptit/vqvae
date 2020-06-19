@@ -1,0 +1,25 @@
+{
+    "dataset": {
+        "path": "data/original/product_128",
+        "train_val_split": 0.1
+    },
+    "model": {
+        "type": "conditional",
+        "image_shape": [128, 128, 3],
+        "latent_shape": [32, 32],
+        "num_layers": 20,
+        "num_embeddings": 512,
+        "num_hiddens": 256,
+        "num_labels": 5256,
+        "learning_rate": 3e-2
+    },
+    "trainer": {
+        "batch_size": 16,
+        "num_gpus": 4,
+        "max_epochs": 100,
+        "num_parallel": 16,
+        "steps_per_epoch": 1000,
+        "num_examples_to_generate": 16,
+        "vqvae_checkpoint_path": "train_log/vqvae-org_128/model-200000"
+    }
+}

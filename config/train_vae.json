@@ -1,0 +1,22 @@
+{
+    "dataset": {
+        "path": "data/cifar/train",
+        "binarizer": 0,
+        "train_val_split": 0.1
+    },
+    "model": {
+        "type": "cvae",
+        "image_shape": [32, 32, 3],
+        "latent_dim": 100,
+        "loss_func": "mse",
+        "learning_rate": 1e-4
+    },
+    "trainer": {
+        "batch_size": 100,
+        "num_gpus": 4,
+        "max_epochs": 100,
+        "num_parallel": 16,
+        "steps_per_epoch": 600,
+        "num_examples_to_generate": 16
+    }
+}
